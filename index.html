@@ -30,21 +30,50 @@
       <h2>Interactive Elements</h2>
 
 
-      <section class="element">
+    <section class="element">
         <h3>In-text link</h3>
+
+        <h4>CSS selector:</h4>
+        <p>a</p>
+
+        <h4>Sample code:</h4>
+        <code>&lt;p&gt;Try our handmade and daily fresh &lt;a href="#"&gt;different type of bread&lt;/a&gt; for you to explore.&lt;/p&gt;</code>
+
+        <h4>Rendered element:</h4>
         <p>Try our handmade and daily fresh <a href="#">different type of bread</a> for you to explore.</p>
       </section>
 
 
       <!-- Default Button styling section -->
-      <section class="element">
+    <section class="element">
         <h3>Navigation Link</h3>
+
+        <h4>CSS selector:</h4>
+        <p>.button-nav</p>
+
+        <h4>Sample code:</h4>
+        <code>&lt;a href="#" class="button-nav"&gt;Order Now&lt;/a&gt;</code>
+
+        <h4>Rendered element:</h4>
         <a class="button-nav" href="#">Order Now</a>
       </section>
 
 
       <section class="element">
         <h3>Submit/Reset Buttons</h3>
+
+        <h4>CSS selector:</h4>
+        <p>button[type="submit"], button[type="reset"]</p>
+
+        <h4>Sample code:</h4>
+        <code>
+          &lt;form&gt;<br>
+          &nbsp;&nbsp;&lt;button type="submit"&gt;Submit&lt;/button&gt;<br>
+          &nbsp;&nbsp;&lt;button type="reset"&gt;Reset&lt;/button&gt;<br>
+          &lt;/form&gt;
+        </code>
+
+        <h4>Rendered element:</h4>
         <form>
           <button type="submit">Submit</button>
           <button type="reset">Reset</button>
@@ -52,27 +81,60 @@
       </section>
 
 
-      <section class="element">
+    <section class="element">
         <h3>Text Input Field with Label</h3>
+
+        <h4>CSS selector:</h4>
+        <p>label + input[type="email"]</p>
+
+        <h4>Sample code:</h4>
+        <code>
+          &lt;label for="email"&gt;Email Address&lt;/label&gt;<br>
+          &lt;input type="email" id="email"&gt;
+        </code>
+
+        <h4>Rendered element:</h4>
         <label for="email">Email Address</label>
         <input type="email" id="email">
       </section>
 
 
-      <section class="element">
+    <section class="element">
         <h3>Radio Button with Label</h3>
+
+        <h4>CSS selector:</h4>
+        <p>input[type="radio"] + label</p>
+
+        <h4>Sample code:</h4>
+        <code>
+          &lt;input type="radio" id="hot" name="temp"&gt;<br>
+          &lt;label for="hot"&gt;Reheat before delivery&lt;/label&gt;
+        </code>
+
+        <h4>Rendered element:</h4>
         <input type="radio" id="hot" name="temp">
         <label for="hot">Reheat before delivery</label>
       </section>
 
 
-      <section class="element">
+    <section class="element">
         <h3>Image as a Link</h3>
+
+        <h4>CSS selector:</h4>
+        <p>a img</p>
+
+        <h4>Sample code:</h4>
+        <code>
+          &lt;a href="#"&gt;<br>
+          &nbsp;&nbsp;&lt;img src="assets/bread.jpeg" alt="A loaf of bread"&gt;<br>
+          &lt;/a&gt;
+        </code>
+
+        <h4>Rendered element:</h4>
         <a href="#">
           <img src="assets/bread.jpeg" alt="A loaf of bread">
         </a>
       </section>
-
 
     </section>
     <!-- // INTERACTIVE ELEMENTS SECTION -->
@@ -83,21 +145,65 @@
     <section id="text_elements">
       <h2>Text Elements</h2>
 
+      <!-- Headings -->
       <section class="element">
         <h3>Headings</h3>
+
+        <h4>CSS selector:</h4>
+        <p>h1, h2, h3, h4</p>
+
+        <h4>Sample code:</h4>
+        <code>
+          &lt;h1&gt;Heading 1&lt;/h1&gt;<br>
+          &lt;h2&gt;Heading 2&lt;/h2&gt;<br>
+          &lt;h3&gt;Heading 3&lt;/h3&gt;<br>
+          &lt;h4&gt;Heading 4&lt;/h4&gt;
+        </code>
+
+        <h4>Rendered element:</h4>
         <h1>Heading 1</h1>
         <h2>Heading 2</h2>
-        <h3>heading 3</h3>
-        <h4>heading 4</h4>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
       </section>
 
+
+      <!-- Paragraphs -->
       <section class="element">
         <h3>Paragraphs</h3>
-        <p>Pellentesque ut tortor ac dolor pellentesque bibendum quis id neque. Vestibulum aliquam a sapien nec vestibulum. Cras vehicula leo vitae nibh egestas mollis. Vestibulum a dui a dolor dictum accumsan. Ut dapibus tempor nisi id ornare. Aenean pellentesque orci eget sapien tristique sagittis. Donec nec blandit purus. </p>
+
+        <h4>CSS selector:</h4>
+        <p>p</p>
+
+        <h4>Sample code:</h4>
+        <code>
+          &lt;p&gt;Pellentesque ut tortor ac dolor pellentesque bibendum quis id neque...&lt;/p&gt;
+        </code>
+
+        <h4>Rendered element:</h4>
+        <p>
+          Pellentesque ut tortor ac dolor pellentesque bibendum quis id neque. Vestibulum aliquam a sapien nec vestibulum. Cras vehicula leo vitae nibh egestas mollis. Vestibulum a dui a dolor dictum accumsan. Ut dapibus tempor nisi id ornare. Aenean pellentesque orci eget sapien tristique sagittis. Donec nec blandit purus.
+        </p>
       </section>
 
+
+      <!-- Numbered Lists -->
       <section class="element">
         <h3>Numbered Lists</h3>
+
+        <h4>CSS selector:</h4>
+        <p>ol li</p>
+
+        <h4>Sample code:</h4>
+        <code>
+          &lt;ol&gt;<br>
+          &nbsp;&nbsp;&lt;li&gt;Customize your own bread&lt;/li&gt;<br>
+          &nbsp;&nbsp;&lt;li&gt;Select your size&lt;/li&gt;<br>
+          &nbsp;&nbsp;&lt;li&gt;Pick your extra taste&lt;/li&gt;<br>
+          &lt;/ol&gt;
+        </code>
+
+        <h4>Rendered element:</h4>
         <ol>
           <li>Customize your own bread</li>
           <li>Select your size</li>
@@ -109,13 +215,30 @@
     <!-- // TEXT ELEMENTS SECTION -->
 
 
-
     <!-- COMBINED ELEMENTS SECTION // -->
     <section id="combined_elements">
       <h2>Combined Elements</h2>
 
+      <!-- Main Navigation -->
       <section class="element">
         <h3>Main Navigation</h3>
+
+        <h4>CSS selector:</h4>
+        <p>.main-nav li a</p>
+
+        <h4>Sample code:</h4>
+        <code>
+          &lt;nav&gt;<br>
+          &nbsp;&nbsp;&lt;ul class="main-nav"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Menu&lt;/a&gt;&lt;/li&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Locations&lt;/a&gt;&lt;/li&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+          &nbsp;&nbsp;&lt;/nav&gt;
+        </code>
+
+        <h4>Rendered element:</h4>
         <nav>
           <ul class="main-nav">
             <li><a href="#">Home</a></li>
@@ -126,8 +249,25 @@
         </nav>
       </section>
 
+
+      <!-- Product/Service Listing -->
       <section class="element">
         <h3>Product/Service Listing</h3>
+
+        <h4>CSS selector:</h4>
+        <p>.product</p>
+
+        <h4>Sample code:</h4>
+        <code>
+          &lt;article class="product"&gt;<br>
+          &nbsp;&nbsp;&lt;img src="assets/bread.jpeg" alt="Bread Loaf"&gt;<br>
+          &nbsp;&nbsp;&lt;h4&gt;White Bread Loaf&lt;/h4&gt;<br>
+          &nbsp;&nbsp;&lt;p class="price"&gt;$5.25&lt;/p&gt;<br>
+          &nbsp;&nbsp;&lt;a href="#"&gt;View Details&lt;/a&gt;<br>
+          &lt;/article&gt;
+        </code>
+
+        <h4>Rendered element:</h4>
         <article class="product">
           <img src="assets/bread.jpeg" alt="Bread Loaf">
           <h4>White Bread Loaf</h4>
@@ -136,30 +276,83 @@
         </article>
       </section>
 
+
+      <!-- Payment Form -->
       <section class="element">
         <h3>Payment Form</h3>
+
+        <h4>CSS selector:</h4>
+        <p>form, fieldset, label, input, button</p>
+
+        <h4>Sample code:</h4>
+        <code>
+          &lt;form&gt;<br>
+          &nbsp;&nbsp;&lt;label for="fullname"&gt;Full Name&lt;/label&gt;<br>
+          &nbsp;&nbsp;&lt;input type="text" id="fullname"&gt;<br><br>
+
+          &nbsp;&nbsp;&lt;label for="cardnumber"&gt;Card Number&lt;/label&gt;<br>
+          &nbsp;&nbsp;&lt;input type="text" id="cardnumber"&gt;<br><br>
+
+          &nbsp;&nbsp;&lt;fieldset&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Payment Method&lt;/legend&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" id="visa" name="payment"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="visa"&gt;Visa&lt;/label&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" id="mastercard" name="payment"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="mastercard"&gt;Mastercard&lt;/label&gt;<br>
+          &nbsp;&nbsp;&lt;/fieldset&gt;<br><br>
+
+          &nbsp;&nbsp;&lt;button type="submit"&gt;Submit Payment&lt;/button&gt;<br>
+          &lt;/form&gt;
+        </code>
+
+        <h4>Rendered element:</h4>
         <form>
           <label for="fullname">Full Name</label>
           <input type="text" id="fullname">
-  
+
           <label for="cardnumber">Card Number</label>
           <input type="text" id="cardnumber">
-  
+
           <fieldset>
             <legend>Payment Method</legend>
             <input type="radio" id="visa" name="payment">
             <label for="visa">Visa</label>
-  
+
             <input type="radio" id="mastercard" name="payment">
             <label for="mastercard">Mastercard</label>
           </fieldset>
-  
+
           <button type="submit">Submit Payment</button>
         </form>
       </section>
 
+
+      <!-- Checkout Cart -->
       <section class="element">
         <h3>Checkout Cart</h3>
+
+        <h4>CSS selector:</h4>
+        <p>table, th, td</p>
+
+        <h4>Sample code:</h4>
+        <code>
+          &lt;table&gt;<br>
+          &nbsp;&nbsp;&lt;thead&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;th&gt;Item&lt;/th&gt;&lt;th&gt;Cost&lt;/th&gt;&lt;/tr&gt;<br>
+          &nbsp;&nbsp;&lt;/thead&gt;<br>
+
+          &nbsp;&nbsp;&lt;tbody&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;White Bread Loaf&lt;/td&gt;&lt;td&gt;$5.25&lt;/td&gt;&lt;/tr&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;Baguette&lt;/td&gt;&lt;td&gt;$3.50&lt;/td&gt;&lt;/tr&gt;<br>
+          &nbsp;&nbsp;&lt;/tbody&gt;<br>
+
+          &nbsp;&nbsp;&lt;tfoot&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;th&gt;Total&lt;/th&gt;&lt;th&gt;$8.75&lt;/th&gt;&lt;/tr&gt;<br>
+          &nbsp;&nbsp;&lt;/tfoot&gt;<br>
+          &lt;/table&gt;
+        </code>
+
+        <h4>Rendered element:</h4>
         <table>
           <thead>
             <tr><th>Item</th><th>Cost</th></tr>
@@ -172,7 +365,6 @@
             <tr><th>Total</th><th>$8.75</th></tr>
           </tfoot>
         </table>
-      </section>
       </section>
 
     </section>
@@ -189,8 +381,6 @@
       </ul>
 
     </section>
-
-
 
   </body>
 </html>
