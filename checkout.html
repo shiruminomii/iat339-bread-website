@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bread.Co — Checkout</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <header>
+    <h1 class="brand-title">Checkout</h1>
+
+    <nav class="top-nav">
+      <a href="homepage.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="index.html">Branding</a>
+      <a href="checkout.html" class="button-nav">Checkout</a>
+    </nav>
+  </header>
+
+
+  <!-- CART SUMMARY -->
+  <section class="cart">
+    <h2>Your Cart</h2>
+
+    <table>
+      <thead>
+        <tr><th>Item</th><th>Cost</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>White Bread Loaf</td><td>$5.25</td></tr>
+        <tr><td>Baguette</td><td>$3.50</td></tr>
+      </tbody>
+      <tfoot>
+        <tr><th>Total</th><th>$8.75</th></tr>
+      </tfoot>
+    </table>
+  </section>
+
+
+  <!-- PAYMENT FORM -->
+  <section class="payment">
+    <h2>Payment Details</h2>
+
+    <form>
+
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname">
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email">
+
+      <label for="cardnumber">Card Number</label>
+      <input type="text" id="cardnumber">
+
+      <fieldset>
+        <legend>Payment Method</legend>
+
+        <input type="radio" id="visa" name="payment">
+        <label for="visa">Visa</label>
+
+        <input type="radio" id="mastercard" name="payment">
+        <label for="mastercard">Mastercard</label>
+
+        <input type="radio" id="pickup" name="payment">
+        <label for="pickup">Pay on Pickup</label>
+      </fieldset>
+
+      <button type="submit" class="button-nav">Submit Payment</button>
+    </form>
+  </section>
+
+
+  <footer>
+    <p>&copy; 2026 Bread.Co Bakery</p>
+  </footer>
+
+</body>
+</html>
