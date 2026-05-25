@@ -1,74 +1,508 @@
-/*
-  STYLE GUIDE STYLING 
-  Default styling for the style guide 
-*/
-body {
-  font-family: sans-serif;
-  padding: 2rem;
+/* ----------------------------------------------------
+   CSS CUSTOM PROPERTIES
+---------------------------------------------------- */
+
+:root {
+  --color-bg: #D3CDBD;
+  --color-text: #666B50;
+  --color-accent: #D08D7E;
+  --color-accent-light: #F5B8AC;
+  --color-teal: #6E8C93;
+  --color-white: #FFFFFF;
+
+  --font-brand: "KyivType Sans Heavy", sans-serif;
+  --font-heading: "KyivType Sans Medium", sans-serif;
+  --font-body: "Rubrik", sans-serif;
+  --font-medium: "Rubrik Medium", sans-serif;
+
+  --radius-sm: 0.3rem;
+  --radius-md: 0.4rem;
+  --radius-lg: 0.5rem;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+
+  --transition: 0.3s ease;
+
+  --max-width: 1100px;
 }
 
+/* ----------------------------------------------------
+   RESET & BASE
+---------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* ----------------------------------------------------
+   GLOBAL BODY
+---------------------------------------------------- */
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  padding: var(--space-sm);
+  line-height: 1.6;
+}
+
+@media (min-width: 600px) {
+  body {
+    padding: var(--space-md);
+  }
+}
+
+@media (min-width: 900px) {
+  body {
+    padding: var(--space-lg);
+    max-width: var(--max-width);
+    margin-inline: auto;
+  }
+}
+
+/* ----------------------------------------------------
+   SECTION DIVIDERS
+---------------------------------------------------- */
+
 .element {
-  padding-bottom: 2rem;
-  border-top-width: 0.15rem;
-  border-top-style: solid;
-  border-top-color: black;
+  padding-bottom: var(--space-lg);
+  border-top: 0.15rem solid var(--color-text);
+  padding-top: var(--space-sm);
+}
+
+/* ----------------------------------------------------
+   TYPOGRAPHY
+---------------------------------------------------- */
+
+.brand-title {
+  font-family: var(--font-brand);
+  text-transform: uppercase;
+  letter-spacing: -0.08em;
+  color: var(--color-text);
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  line-height: 1.1;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  font-size: clamp(1.4rem, 4vw, 2.25rem);
 }
 
 h2 {
-  margin-top: 2rem;
+  font-family: var(--font-heading);
+  margin-top: var(--space-lg);
+  color: var(--color-text);
+  font-size: clamp(1.2rem, 3.5vw, 1.75rem);
 }
 
 h3 {
-  margin-top: 1rem;
+  font-family: var(--font-medium);
+  text-transform: none;
+  letter-spacing: -0.08em;
+  margin-top: var(--space-sm);
+  color: var(--color-teal);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 
 h4 {
+  font-family: var(--font-body);
   margin-bottom: 0.25rem;
+  color: var(--color-teal);
+  font-size: clamp(0.875rem, 2vw, 1rem);
 }
 
 p {
   margin-top: 0;
+  color: var(--color-text);
+  font-size: clamp(0.875rem, 2vw, 1rem);
 }
 
-nav a:hover, nav a:focus {
+/* ----------------------------------------------------
+   LINKS
+---------------------------------------------------- */
+
+a {
+  color: var(--color-teal);
+  text-decoration: underline;
+  transition: color var(--transition);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-white);
   text-decoration: none;
 }
 
-code {
-  background-color: #EEE;
+/* ----------------------------------------------------
+   TOP NAVIGATION
+---------------------------------------------------- */
+
+header {
+  margin-bottom: var(--space-lg);
+}
+
+.top-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs) var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.top-nav a {
+  font-family: var(--font-medium);
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.2rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.top-nav a:hover,
+.top-nav a:focus {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+/* ----------------------------------------------------
+   BUTTONS
+---------------------------------------------------- */
+
+.button-nav {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-family: var(--font-medium);
+  letter-spacing: -0.05em;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.button-nav:hover,
+.button-nav:focus {
+  background-color: var(--color-accent-light);
+  color: var(--color-white);
+}
+
+button {
+  padding: 0.6rem 1rem;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-medium);
+  cursor: pointer;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  transition: background-color var(--transition);
+  min-width: 80px;
+}
+
+button:hover {
+  background-color: var(--color-accent-light);
+}
+
+/* Button groups stay side by side on small screens too */
+form > button + button {
+  margin-left: var(--space-xs);
+}
+
+/* ----------------------------------------------------
+   INPUT FIELDS
+---------------------------------------------------- */
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
   padding: 0.5rem;
+  border: 2px solid var(--color-text);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-white);
+  color: var(--color-text);
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: var(--space-sm);
+  font-size: 1rem;
+  font-family: var(--font-body);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+input[type="radio"] {
+  accent-color: var(--color-accent);
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+/* Inline radio + label pairs */
+input[type="radio"] + label {
+  display: inline;
+  margin-left: 0.35rem;
+  margin-right: var(--space-sm);
+}
+
+/* ----------------------------------------------------
+   FIELDSET
+---------------------------------------------------- */
+
+fieldset {
+  border: 2px solid var(--color-text);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  max-width: 480px;
+}
+
+legend {
+  font-family: var(--font-medium);
+  color: var(--color-teal);
+  padding: 0 0.4rem;
+  font-size: 0.9rem;
+}
+
+/* ----------------------------------------------------
+   IMAGE AS LINK
+---------------------------------------------------- */
+
+a img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  transition: filter var(--transition), opacity var(--transition);
+}
+
+a:hover img {
+  filter: brightness(70%) sepia(20%) hue-rotate(40deg);
+  opacity: 0.9;
+}
+
+/* ----------------------------------------------------
+   PRODUCT CARDS
+---------------------------------------------------- */
+
+.product {
+  background-color: var(--color-white);
+  padding: var(--space-sm);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-text);
+  width: 100%;
+  max-width: 250px;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
   display: block;
 }
 
+.price {
+  font-family: var(--font-medium);
+  color: var(--color-accent);
+}
 
-/* 
-  INTERACTIVE ELEMENTS -------------------
-*/
+/* Product grid when used in a listing context */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
 
-/* Styling for the navigation button */
-.button-nav {
-  display: inline-block;
-  padding: 0.5rem;
-  color: white;
-  background-color: rgb(50,50,50);
+/* ----------------------------------------------------
+   TABLES
+---------------------------------------------------- */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;          /* horizontal scroll on small screens */
+  -webkit-overflow-scrolling: touch;
+  margin-top: var(--space-sm);
+  border-radius: var(--radius-lg);
+}
+
+table {
+  width: 100%;
+  min-width: 280px;
+  border-collapse: collapse;
+  background-color: var(--color-white);
+}
+
+th,
+td {
+  border: 2px solid var(--color-text);
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+th {
+  background-color: var(--color-teal);
+  color: var(--color-white);
+}
+
+/* ----------------------------------------------------
+   HERO SECTION
+---------------------------------------------------- */
+
+.hero {
+  background-color: var(--color-text);
+  color: var(--color-white);
+  padding: clamp(var(--space-md), 6vw, var(--space-xl));
+  border-radius: var(--radius-lg);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.hero h1,
+.hero h2 {
+  color: var(--color-white);
+}
+
+/* ----------------------------------------------------
+   FEATURED GRID
+---------------------------------------------------- */
+
+.featured {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+/* h2 inside .featured spans all columns so it sits
+   as a full-width heading above the product cards */
+.featured > h2 {
+  grid-column: 1 / -1;
+  margin-top: 0;
+}
+
+/* Product cards always fill equal columns */
+.featured > .product {
+  max-width: 100%;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .featured {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .featured {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ----------------------------------------------------
+   CODE BLOCKS
+---------------------------------------------------- */
+
+code {
+  display: block;
+  background-color: color-mix(in srgb, var(--color-text) 10%, var(--color-bg));
+  border-left: 3px solid var(--color-accent);
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.7;
+  margin-bottom: var(--space-sm);
+  color: var(--color-text);
+}
+
+/* ----------------------------------------------------
+   LISTS
+---------------------------------------------------- */
+
+ol,
+ul {
+  padding-left: var(--space-md);
+}
+
+li {
+  margin-bottom: 0.35rem;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+/* Main nav list */
+.main-nav {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs) var(--space-sm);
+}
+
+.main-nav li a {
   text-decoration: none;
-  transition-property: background-color; 
-  transition-duration: 0.5s;
+  font-family: var(--font-medium);
+  color: var(--color-teal);
+  padding: 0.2rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--transition), color var(--transition);
 }
 
-.button-nav:hover, .button-nav:focus {
-  background-color: rgb(200,200,200);
+.main-nav li a:hover {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
 }
 
+/* ----------------------------------------------------
+   FOOTER
+---------------------------------------------------- */
 
+footer {
+  margin-top: var(--space-xl);
+  text-align: center;
+  color: var(--color-text);
+  font-size: 0.875rem;
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-text);
+}
 
-/* 
-  TEXT ELEMENTS -------------------
-*/
+/* ----------------------------------------------------
+   CITATIONS SECTION
+---------------------------------------------------- */
 
+#citations ul {
+  list-style: disc;
+}
 
-
-
-/* 
-  COMBINED ELEMENTS -------------------
-*/
+#citations li {
+  margin-bottom: var(--space-xs);
+  font-size: 0.875rem;
+}
