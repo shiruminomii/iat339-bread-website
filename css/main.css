@@ -2,6 +2,38 @@
    CSS CUSTOM PROPERTIES
 ---------------------------------------------------- */
 
+@font-face {
+  font-family: 'KyivType Sans Heavy';
+  src: url('../assets/kyivtype/KyivType-NoVariable/TTF/KyivTypeSans-Heavy-.ttf') format('truetype');
+  font-weight: 900; 
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KyivType Sans Medium';
+  src: url('../assets/kyivtype/KyivType-NoVariable/TTF/KyivTypeSans-Medium-.ttf') format('truetype');
+  font-weight: 900; 
+  font-style: normal;
+}
+
+/* Adobe Font Catelogue for Self Reference: https://use.typekit.net/bfx0wuo.css */
+@font-face {
+  font-family: "Rubik";
+  src: url("https://use.typekit.net/af/4642b0/0000000000000000774ed072/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/4642b0/0000000000000000774ed072/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/4642b0/0000000000000000774ed072/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "Rubik Medium";
+  src: url("https://use.typekit.net/af/dc2a37/0000000000000000774ed06c/31/l?subset_id=2&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/dc2a37/0000000000000000774ed06c/31/d?subset_id=2&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/dc2a37/0000000000000000774ed06c/31/a?subset_id=2&fvd=n4&v=3") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
 :root {
   --color-bg: #D3CDBD;
   --color-text: #666B50;
@@ -12,8 +44,8 @@
 
   --font-brand: "KyivType Sans Heavy", sans-serif;
   --font-heading: "KyivType Sans Medium", sans-serif;
-  --font-body: "Rubrik", sans-serif;
-  --font-medium: "Rubrik Medium", sans-serif;
+  --font-body: "Rubik", sans-serif;
+  --font-medium: "Rubik Medium", sans-serif;
 
   --radius-sm: 0.3rem;
   --radius-md: 0.4rem;
@@ -89,7 +121,7 @@ body {
 
 .brand-title {
   font-family: var(--font-brand);
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: -0.08em;
   color: var(--color-text);
   font-size: clamp(1.5rem, 5vw, 3rem);
@@ -154,6 +186,21 @@ a:focus {
 header {
   margin-bottom: var(--space-lg);
 }
+
+/* ----------------------------------------------------
+  attempt to make header override margins set by <body>, 
+  works bad, feel free to change
+
+.home-header {
+  width: 100vw;
+  position: relative;
+  background: var(--color-accent);
+  left: 50%;
+  right: 50%; 
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+---------------------------------------------------- */
 
 .top-nav {
   display: flex;
