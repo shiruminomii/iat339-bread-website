@@ -4,86 +4,118 @@
   <meta charset="UTF-8">
   <title>Bread.Co — Freshly Baked Every Day</title>
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="https://use.typekit.net/bfx0wuo.css">
 </head>
 
 <body>
 
+  <!-- HEADER -->
   <header class="home-header">
-    <h1 class="brand-title">Bread.Co</h1>
-    <p>Handmade. Fresh. Local.</p>
+    <div class="header-inner">
+      <a href="homepage.html" class="logo-link">
+        <img src="assets/bread-icon.png" alt="Bread.Co Logo" class="logo-img">
+      </a>
 
-    <nav class="top-nav">
-      <a href="homepage.html">Home</a>
-      <a href="menu.html">Menu</a>
-      <a href="about.html">About</a>
-      <a href="index.html">Branding</a>
-      <a href="checkout.html" class="button-nav">Checkout</a>
-    </nav>
+      <nav class="top-nav main-nav-right">
+        <a href="homepage.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="index.html">Branding</a>
+        <a href="checkout.html" class="button-nav">Checkout</a>
+      </nav>
+    </div>
   </header>
 
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <h2>Fresh Bread, Baked Daily</h2>
-    <p>Discover our handcrafted loaves, pastries, and seasonal specials.</p>
-    <a href="menu.html" class="button-nav">Order Now</a>
+  <!-- ABOUT SECTION -->
+  <section class="about-section full-bleed">
+
+    <div class="about-inner">
+
+      <div class="about-box square-box">
+        <h2 class="about-label">about</h2>
+
+        <h3>Freshly Baked. Daily Baked.</h3>
+
+        <p>
+          At Bread Company, we believe that great bread takes time, patience, and just a few
+          honest ingredients. Every loaf we bake is handcrafted daily using traditional
+          long fermentation methods and stone ground grains.
+        </p>
+      </div>
+
+      <div class="about-image">
+        <img src="assets/bread.jpeg" alt="Bread Image">
+      </div>
+
+    </div>
+
   </section>
 
 
-  <!-- FEATURED PRODUCTS -->
-  <section class="featured">
-    <h2>Customer Favorites</h2>
 
-    <article class="product">
-      <img src="assets/bread.jpeg" alt="White Bread Loaf">
-      <h3>White Bread Loaf</h3>
-      <p class="price">$5.25</p>
-      <a href="#">View Details</a>
-    </article>
+  <!-- CUSTOMER FAVOURITES -->
+  <section class="favourites-section full-bleed">
+    <div class="section-header">
+      <h2>Customer Favourites</h2>
+      <img src="assets/" alt="Bread Icon" class="section-icon">
+    </div>
 
-    <article class="product">
-      <img src="assets/baguette.avif" alt="Baguette">
-      <h3>Classic Baguette</h3>
-      <p class="price">$3.50</p>
-      <a href="#">View Details</a>
-    </article>
+    <div class="product-grid">
+      <article class="product">
+        <img src="assets/bread.jpeg" alt="White Bread Loaf">
+        <h3>White Bread Loaf</h3>
+        <p class="price">$5.25</p>
+        <a href="#">View Details</a>
+      </article>
 
-    <article class="product">
-      <img src="assets/sourdough.jpg" alt="Sourdough">
-      <h3>Sourdough Round</h3>
-      <p class="price">$6.75</p>
-      <a href="#">View Details</a>
-    </article>
+      <article class="product">
+        <img src="assets/baguette.avif" alt="Baguette">
+        <h3>Classic Baguette</h3>
+        <p class="price">$3.50</p>
+        <a href="#">View Details</a>
+      </article>
+
+      <article class="product">
+        <img src="assets/sourdough.jpg" alt="Sourdough">
+        <h3>Sourdough Round</h3>
+        <p class="price">$6.75</p>
+        <a href="#">View Details</a>
+      </article>
+    </div>
+
+    <div class="center-btn">
+      <a href="menu.html" class="button-nav">See More</a>
+    </div>
   </section>
 
 
-    <!-- ABOUT SECTION -->
-    <section class="about">
-      <h2>Our Story</h2>
-      <p>
-        At Bread.Co, we believe in simple ingredients, traditional methods, and
-        unforgettable flavor. Every loaf is shaped by hand and baked fresh each morning —
-        no shortcuts, no preservatives, just honest bread made the way it was meant to be.
-      </p>
-      <p>
-        It started small. A home kitchen, a sourdough starter named Margot, and a
-        stubborn belief that good bread could anchor a community. What began as weekend
-        loaves for neighbors grew into something we never quite expected — a real
-        bakery, a real team, and a real reason to get up at 4am every single day.
-      </p>
-      <p>
-        Every recipe we use has been tested, tweaked, rested, and tested again. We
-        source our flour from local mills, our seeds from regional farms, and our
-        inspiration from the seasons. When rhubarb comes in, you'll find it in our
-        morning buns. When the days get shorter, the spiced loaves come out. We bake
-        with what's around us.
-      </p>
-      <p>
-        We're proud to be part of this neighborhood. Come in, say hello, and leave
-        with something warm. That's what we're here for.
-      </p>
-    </section>
+  <!-- NEWS & EVENTS -->
+  <section class="news-section full-bleed">
+    <div class="section-header left-align">
+      <img src="assets/" alt="Bread Icon" class="section-icon">
+      <h2>News & Events</h2>
+    </div>
+
+    <div class="news-list">
+      <article class="news-card">
+        <img src="assets/bread.jpeg" alt="News Image">
+        <div class="news-info">
+          <h3>Freshly Baked, Daily Baked</h3>
+          <p>Discover our new seasonal pastries and weekly specials.</p>
+          <a href="#" class="button-nav">Learn More</a>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <img src="assets/bread.jpeg" alt="News Image">
+        <div class="news-info">
+          <h3>Community Baking Workshop</h3>
+          <p>Join us for a hands-on bread making experience.</p>
+          <a href="#" class="button-nav">Learn More</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
 
   <footer>
