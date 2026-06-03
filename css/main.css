@@ -2,50 +2,59 @@
    CSS CUSTOM PROPERTIES
 ---------------------------------------------------- */
 
-@font-face {
-  font-family: 'KyivType Sans Heavy';
-  src: url('../assets/kyivtype/KyivType-NoVariable/TTF/KyivTypeSans-Heavy-.ttf') format('truetype');
-  font-weight: 900; 
-  font-style: normal;
-}
-@font-face {
-  font-family: 'KyivType Sans Medium';
-  src: url('../assets/kyivtype/KyivType-NoVariable/TTF/KyivTypeSans-Medium-.ttf') format('truetype');
-  font-weight: 900; 
-  font-style: normal;
-}
-
 /* Adobe Font Catelogue for Self Reference: https://use.typekit.net/bfx0wuo.css */
+
 @font-face {
-  font-family: "Rubik";
-  src: url("https://use.typekit.net/af/4642b0/0000000000000000774ed072/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/4642b0/0000000000000000774ed072/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/4642b0/0000000000000000774ed072/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
-  font-display: auto;
-  font-style: normal;
-  font-weight: 300;
-  font-stretch: normal;
+  font-family:"P22 Book Italic";
+  src:url("https://use.typekit.net/af/781cff/00000000000000007735b3db/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/781cff/00000000000000007735b3db/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/781cff/00000000000000007735b3db/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+  font-display:auto;
+  font-style:italic;
+  font-weight:400;
+  font-stretch:normal;
 }
 
 @font-face {
-  font-family: "Rubik Medium";
-  src: url("https://use.typekit.net/af/dc2a37/0000000000000000774ed06c/31/l?subset_id=2&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/dc2a37/0000000000000000774ed06c/31/d?subset_id=2&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/dc2a37/0000000000000000774ed06c/31/a?subset_id=2&fvd=n4&v=3") format("opentype");
-  font-display: auto;
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: normal;
+  font-family:"Urbane Demi";
+  src:url("https://use.typekit.net/af/2ab888/00000000000000007735bfa2/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/2ab888/00000000000000007735bfa2/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/2ab888/00000000000000007735bfa2/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+  font-display:auto;
+  font-style:normal;
+  font-weight:700;
+  font-stretch:normal;
 }
+
+@font-face {
+  font-family:"Urbane Med";
+  src:url("https://use.typekit.net/af/d7e49c/00000000000000007735bf9b/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/d7e49c/00000000000000007735bf9b/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/d7e49c/00000000000000007735bf9b/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+  font-display:auto;
+  font-style:normal;
+  font-weight:500;
+  font-stretch:normal;
+}
+
+
+@font-face {
+  font-family:"Urbane Light";
+  src:url("https://use.typekit.net/af/e45011/00000000000000007735bfa1/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/e45011/00000000000000007735bfa1/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/e45011/00000000000000007735bfa1/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+  font-display:auto;
+  font-style:normal;
+  font-weight:300;
+  font-stretch:normal;
+}
+
 
 :root {
   --color-bg: #fff7e1;
-  --color-text: #666B50;
-  --color-accent: #D08D7E;
-  --color-accent-light: #F5B8AC;
+  --color-text: #000000;
+  --color-accent: #E86134;
+  --color-accent-light: #F8CCAE;
   --color-teal: #6E8C93;
   --color-white: #FFFFFF;
 
-  --font-brand: "KyivType Sans Heavy", sans-serif;
-  --font-heading: "KyivType Sans Medium", sans-serif;
-  --font-body: "Rubik", sans-serif;
-  --font-medium: "Rubik Medium", sans-serif;
+  --font-brand: "P22 Book Italic", sans-serif;
+  --font-heading: "Urbane Demi", sans-serif;
+  --font-medium: "Urbane Med", sans-serif;  
+  --font-body: "Urbane Light", sans-serif;
+
 
   --radius-sm: 0.3rem;
   --radius-md: 0.4rem;
@@ -63,6 +72,14 @@
 }
 
 .section-header {
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='10'%3E%3Cpath d='M0 5 Q5 0 10 5 Q15 10 20 5' fill='none' stroke='%23b49a78' stroke-width='0.8' opacity='0.4'/%3E%3C/svg%3E");
+  background-size: 20px 10px;
+  background-repeat: repeat;
+  background-color: var(--color-bg);
+  border: 2px solid #000000;
+  overflow:hidden;
+  border-radius: var(--radius-lg);
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -159,48 +176,54 @@ body {
    TYPOGRAPHY
 ---------------------------------------------------- */
 
+/* ----------------------------------------------------
 .brand-title {
   font-family: var(--font-brand);
   text-transform: none;
-  letter-spacing: -0.08em;
+  letter-spacing: 108%;
   color: var(--color-text);
   font-size: clamp(1.5rem, 5vw, 3rem);
   line-height: 1.1;
 }
+---------------------------------------------------- */
 
 h1 {
-  font-family: var(--font-heading);
+  font-family: var(--font-brand);
+  line-height: 108%;
+  letter-spacing:-8%;
   color: var(--color-text);
-  font-size: clamp(1.4rem, 4vw, 2.25rem);
+  font-size: 3em;
 }
 
 h2 {
   font-family: var(--font-heading);
   margin-top: var(--space-lg);
   color: var(--color-text);
-  font-size: clamp(1.2rem, 3.5vw, 1.75rem);
+  font-size: 2em;
+  line-height: 96.8%
 }
 
 h3 {
   font-family: var(--font-medium);
   text-transform: none;
-  letter-spacing: -0.08em;
+  letter-spacing: 0em;
   margin-top: var(--space-sm);
-  color: var(--color-teal);
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-}
-
-h4 {
-  font-family: var(--font-body);
-  margin-bottom: 0.25rem;
-  color: var(--color-teal);
-  font-size: clamp(0.875rem, 2vw, 1rem);
+  color: var(--color-accent);
+  font-size: 1.3125em;
+  line-height: 96.8%
 }
 
 p {
+  font-family: var(--font-body);
   margin-top: 0;
+  line-height: 1.293em;
   color: var(--color-text);
-  font-size: clamp(0.875rem, 2vw, 1rem);
+  font-size: 1em;
+}
+
+
+.bold { /* add to embolden paragraph */
+  font-family: var(--font-medium);
 }
 
 /* ----------------------------------------------------
@@ -208,7 +231,7 @@ p {
 ---------------------------------------------------- */
 
 a {
-  color: var(--color-teal);
+  color: var(--color-accent);
   text-decoration: underline;
   transition: color var(--transition);
 }
@@ -250,10 +273,8 @@ header {
 }
 
 .top-nav a {
-  font-family: var(--font-medium);
-  text-transform: uppercase;
-  letter-spacing: -0.05em;
-  font-size: 0.85rem;
+  font-family: var(--font-body);
+  text-transform: lowercase;
   white-space: nowrap;
   text-decoration: none;
   padding: 0.2rem 0;
@@ -263,8 +284,8 @@ header {
 
 .top-nav a:hover,
 .top-nav a:focus {
-  color: var(--color-accent);
-  border-bottom-color: var(--color-accent);
+  color: var(--color-bg);
+  border-color: var(--color-text);
 }
 
 /* ----------------------------------------------------
@@ -274,37 +295,42 @@ header {
 .button-nav {
   display: inline-block;
   padding: 0.6rem 1.2rem;
-  background-color: var(--color-accent);
-  color: var(--color-white);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border: 2px solid var(--color-bg);
   border-radius: var(--radius-md);
   text-decoration: none;
-  font-family: var(--font-medium);
-  letter-spacing: -0.05em;
-  font-size: clamp(0.85rem, 2vw, 1rem);
+  font-family: var(--font-body);
+  letter-spacing: 0em;
+  font-size: 1.3125em;
   transition: background-color var(--transition), color var(--transition);
 }
 
 .button-nav:hover,
 .button-nav:focus {
-  background-color: var(--color-accent-light);
-  color: var(--color-white);
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  border: 2px solid #000000;
+  border-radius: var(--radius-md);
 }
 
 button {
   padding: 0.6rem 1rem;
-  background-color: var(--color-accent);
-  color: var(--color-white);
-  border: none;
+  background-color: var(--color-accent-light);
+  color: var(--color-bg);
   border-radius: var(--radius-md);
-  font-family: var(--font-medium);
+  font-family: var(--font-body);
   cursor: pointer;
-  font-size: clamp(0.85rem, 2vw, 1rem);
+  font-size: 1.3125em;
   transition: background-color var(--transition);
   min-width: 80px;
 }
 
 button:hover {
-  background-color: var(--color-accent-light);
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  border: 2px solid #000000;
+  border-radius: var(--radius-md);
 }
 
 /* Button groups stay side by side on small screens too */
@@ -570,7 +596,7 @@ li {
 }
 
 .logo-img {
-  width: 3rem;
+  width: 8em;
   height: auto;
   display: block;
 }
@@ -642,10 +668,14 @@ footer {
 .about-box {
   width: 21.875rem;
   height: 21.875rem;
-  background: var(--color-white);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='10'%3E%3Cpath d='M0 5 Q5 0 10 5 Q15 10 20 5' fill='none' stroke='%23b49a78' stroke-width='0.8' opacity='0.4'/%3E%3C/svg%3E");
+  background-size: 20px 10px;
+  background-repeat: repeat;
+  background-color: var(--color-bg);
   border: 0.125rem solid var(--color-text);
   border-radius: var(--radius-lg);
   padding: var(--space-lg);
+  overflow:hidden;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -654,12 +684,25 @@ footer {
 
 .about-label {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  font-size: 1.3125em;  
   font-family: var(--font-medium);
   color: var(--color-accent);
   text-transform: lowercase;
+  padding: 2px 10px;
+  top: 0em;
+  left: 0em;
 }
+
+.dot {    /* decorative element */
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  width: 1.5em; height: 1.5em;
+  border-radius: 50%;
+  border: 2px solid var(--color-text);
+  background: var(--color-accent-light);
+}
+
 
 .about-image img {
   width: 21.875rem;
