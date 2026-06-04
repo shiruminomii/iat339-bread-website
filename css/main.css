@@ -781,13 +781,20 @@ footer {
 }
 
 .news-card img {
-  width: 12.5rem; 
+  width: 40%;
+  height: 180px;
+  object-fit: cover;
   border-radius: var(--radius-md);
-  flex-shrink: 0;
+  display: block;
 }
 
 .news-info {
   flex: 1;
+}
+
+.news-info p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* MOBILE */
@@ -836,7 +843,7 @@ footer {
   }
 }
 
-/* Card layout — description + CTA button */
+/* Card layout*/
 .menu-grid .product {
   display: flex;
   flex-direction: column;
