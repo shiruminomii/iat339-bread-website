@@ -77,7 +77,7 @@
   background-size: 20px 10px;
   background-repeat: repeat;
   background-color: var(--color-bg);
-  border: 2px solid #000000;
+  border: 2px solid #F8CCAE;
   overflow:hidden;
   border-radius: var(--radius-lg);
   text-align: center;
@@ -89,6 +89,12 @@
   gap: 1rem;
   width: 100%;
   margin-bottom: 2rem;
+}
+
+.section-icon {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
 }
 
 .section-header h2 {
@@ -434,7 +440,8 @@ a:hover img {
 
 .product img {
   width: 100%;
-  height: auto;
+  height: 180px;
+  object-fit: cover;
   border-radius: var(--radius-md);
   display: block;
 }
@@ -666,8 +673,8 @@ footer {
 }
 
 .about-box {
-  width: 21.875rem;
-  height: 21.875rem;
+  width: 22rem;
+  height: 22rem;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='10'%3E%3Cpath d='M0 5 Q5 0 10 5 Q15 10 20 5' fill='none' stroke='%23b49a78' stroke-width='0.8' opacity='0.4'/%3E%3C/svg%3E");
   background-size: 20px 10px;
   background-repeat: repeat;
@@ -675,6 +682,7 @@ footer {
   border: 0.125rem solid var(--color-text);
   border-radius: var(--radius-lg);
   padding: var(--space-lg);
+  padding-top: 3rem;
   overflow:hidden;
   position: relative;
   display: flex;
@@ -684,13 +692,13 @@ footer {
 
 .about-label {
   position: absolute;
-  font-size: 1.3125em;  
+  font-size: 1.3em;  
   font-family: var(--font-medium);
   color: var(--color-accent);
   text-transform: lowercase;
-  padding: 2px 10px;
+  padding: 0.5rem 1r;
   top: 0em;
-  left: 0em;
+  left: 2rem;
 }
 
 .dot {    /* decorative element */
@@ -773,7 +781,7 @@ footer {
 }
 
 .news-card img {
-  width: 12.5rem; /* 200px → rem */
+  width: 12.5rem; 
   border-radius: var(--radius-md);
   flex-shrink: 0;
 }
@@ -782,7 +790,7 @@ footer {
   flex: 1;
 }
 
-/* MOBILE — keep image beside text */
+/* MOBILE */
 @media (max-width: 48rem) {
   .news-card {
     flex-direction: row;
@@ -794,3 +802,68 @@ footer {
   }
 }
 
+/* ----------------------------------------------------
+   MENU PAGE — PRODUCT GRID
+---------------------------------------------------- */
+
+.menu-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+/* 2-column on medium screens */
+@media (max-width: 56rem) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Single column on mobile */
+@media (max-width: 36rem) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-hero-inner {
+    padding: var(--space-lg) var(--space-sm);
+  }
+}
+
+/* Card layout — description + CTA button */
+.menu-grid .product {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.menu-grid .product p {
+  flex: 1;
+  font-size: 0.9rem;
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-sm);
+  opacity: 0.8;
+}
+
+.menu-grid .product .button-nav {
+  align-self: flex-start;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border-color: var(--color-accent);
+}
+
+.menu-grid .product .button-nav:hover,
+.menu-grid .product .button-nav:focus {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+  color: var(--color-bg);
+}
