@@ -1063,7 +1063,6 @@ footer {
   margin: 0;
 }
  
- 
 /* ----------------------------------------------------
    INGREDIENTS BOX
 ---------------------------------------------------- */
@@ -1105,7 +1104,6 @@ footer {
   border: 2px solid var(--color-text);
   background: var(--color-bg);
 }
- 
  
 /* ----------------------------------------------------
    INFO TILES
@@ -1282,6 +1280,8 @@ footer {
   color: var(--color-accent);
   display: block;
 }
+
+/* PRODUCT PAGE RESPONSIVE */
 
 @media (max-width: 56rem) {
  
