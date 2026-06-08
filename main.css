@@ -163,6 +163,9 @@ body {
   body {
     padding: var(--space-md);
   }
+  .main-nav-right {
+    gap: 0.5rem;
+  }
 }
 
 @media (min-width: 40rem) {
