@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>White Bread Loaf — Bread.Co</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="home-header">
+    <div class="header-inner">
+      <a href="homepage.html" class="logo-link">
+        <img src="assets/breadLogoLong.png" alt="Bread.Co Logo" class="logo-img">
+      </a>
+      <nav class="top-nav main-nav-right">
+        <a href="homepage.html" class="button-nav">Home</a>
+        <a href="menu.html" class="button-nav">Menu</a>
+        <a href="checkout.html" class="button-nav">Checkout</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- PRODUCT DETAIL -->
+  <section class="product-detail-section full-bleed">
+    <div class="product-detail-inner">
+
+      <!-- Left: Images (CSS-only switcher via hidden radio inputs) -->
+      <div class="product-images">
+        <input type="radio" name="product-img" id="img1" class="thumb-radio" checked>
+        <input type="radio" name="product-img" id="img2" class="thumb-radio">
+        <input type="radio" name="product-img" id="img3" class="thumb-radio">
+
+        <div class="product-main-img-wrap">
+          <img class="product-main-img" id="main-show-1" src="assets/bread.jpeg" alt="White Bread Loaf">
+          <img class="product-main-img" id="main-show-2" src="assets/whitebread1.jpg" alt="White Bread Loaf — sliced">
+          <img class="product-main-img" id="main-show-3" src="assets/whitebread2.webp" alt="White Bread Loaf — texture">
+        </div>
+
+        <div class="product-thumbs">
+          <label for="img1" class="thumb-label">
+            <img class="product-thumb" src="assets/bread.jpeg" alt="Whole loaf">
+          </label>
+          <label for="img2" class="thumb-label">
+            <img class="product-thumb" src="assets/whitebread1.jpg" alt="Sliced view">
+          </label>
+          <label for="img3" class="thumb-label">
+            <img class="product-thumb" src="assets/whitebread2.webp" alt="Texture close">
+          </label>
+        </div>
+      </div>
+
+      <!-- Right: Info -->
+      <div class="product-info">
+
+        <h1>White Bread Loaf</h1>
+
+        <div class="product-price-row">
+          <span class="product-price">$5.25</span>
+          <span class="product-weight">800 g</span>
+        </div>
+
+        <p class="product-desc">
+          Our classic White Bread Loaf is baked fresh every morning using a slow overnight ferment
+          and unbleached stone-ground flour. The result is a soft, pillowy crumb with a gently
+          golden crust — perfect for toast, sandwiches, or enjoyed warm straight from the bag.
+        </p>
+
+        <hr class="info-divider">
+
+        <!-- Ingredients -->
+        <div class="ingredients-box">
+          <div class="dot-corner"></div>
+          <h2>ingredients</h2>
+          <p>Unbleached wheat flour, water, salt, active dry yeast, cane sugar, unsalted butter.
+             <span class="bold">Contains: wheat, dairy.</span></p>
+        </div>
+
+        <!-- Quick-info tiles -->
+        <div class="info-tiles">
+          <div class="info-tile">
+            <span class="tile-icon">🌾</span>
+            <span class="tile-label">grain</span>
+            <span class="tile-value">Stone-ground wheat</span>
+          </div>
+          <div class="info-tile">
+            <span class="tile-icon">🕐</span>
+            <span class="tile-label">ferment</span>
+            <span class="tile-value">12 h overnight</span>
+          </div>
+          <div class="info-tile">
+            <span class="tile-icon">🍞</span>
+            <span class="tile-label">baked</span>
+            <span class="tile-value">Daily, 6 am</span>
+          </div>
+        </div>
+
+        <!-- Quantity + Add to Cart -->
+        <div class="purchase-row">
+          <label for="qty" class="qty-label">qty</label>
+          <select id="qty" name="qty" class="qty-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <a href="checkout.html" class="btn-add-cart">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Full-width Nutrition Panel -->
+      <div class="nutrition-section">
+        <div class="nutrition-header">
+          <h2>Nutrition Facts</h2>
+          <span>per 2-slice serving (approx. 80 g)</span>
+        </div>
+        <div class="nutrition-grid">
+          <div class="nutr-cell">
+            <span class="nutr-name">calories</span>
+            <span class="nutr-val">210</span>
+            <span class="nutr-dv">kcal</span>
+          </div>
+          <div class="nutr-cell">
+            <span class="nutr-name">carbs</span>
+            <span class="nutr-val">40 g</span>
+            <span class="nutr-dv">15% DV</span>
+          </div>
+          <div class="nutr-cell">
+            <span class="nutr-name">protein</span>
+            <span class="nutr-val">7 g</span>
+            <span class="nutr-dv">14% DV</span>
+          </div>
+          <div class="nutr-cell">
+            <span class="nutr-name">total fat</span>
+            <span class="nutr-val">2.5 g</span>
+            <span class="nutr-dv">3% DV</span>
+          </div>
+          <div class="nutr-cell">
+            <span class="nutr-name">saturated fat</span>
+            <span class="nutr-val">0.8 g</span>
+            <span class="nutr-dv">4% DV</span>
+          </div>
+          <div class="nutr-cell">
+            <span class="nutr-name">sodium</span>
+            <span class="nutr-val">380 mg</span>
+            <span class="nutr-dv">17% DV</span>
+          </div>
+          <div class="nutr-cell">
+            <span class="nutr-name">dietary fibre</span>
+            <span class="nutr-val">1.5 g</span>
+            <span class="nutr-dv">5% DV</span>
+          </div>
+          <div class="nutr-cell">
+            <span class="nutr-name">sugars</span>
+            <span class="nutr-val">3 g</span>
+            <span class="nutr-dv">—</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Bread.Co Bakery</p>
+    <a href="index.html">Branding</a>
+  </footer>
+
+</body>
+</html>

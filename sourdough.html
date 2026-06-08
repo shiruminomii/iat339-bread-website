@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sourdough Round — Bread.Co</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/product-detail.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="home-header">
+    <div class="header-inner">
+      <a href="homepage.html" class="logo-link">
+        <img src="assets/breadLogoLong.png" alt="Bread.Co Logo" class="logo-img">
+      </a>
+      <nav class="top-nav main-nav-right">
+        <a href="homepage.html" class="button-nav">Home</a>
+        <a href="menu.html" class="button-nav">Menu</a>
+        <a href="checkout.html" class="button-nav">Checkout</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- PRODUCT DETAIL -->
+  <section class="product-detail-section full-bleed">
+    <div class="product-detail-inner">
+
+      <!-- Left: Images (CSS-only switcher via hidden radio inputs) -->
+      <div class="product-images">
+        <input type="radio" name="product-img" id="img1" class="thumb-radio" checked>
+        <input type="radio" name="product-img" id="img2" class="thumb-radio">
+        <input type="radio" name="product-img" id="img3" class="thumb-radio">
+
+        <div class="product-main-img-wrap">
+          <img class="product-main-img" id="main-show-1" src="assets/sourdough.jpg" alt="Sourdough Round">
+          <img class="product-main-img" id="main-show-2" src="assets/sourdough1.webp" alt="Sourdough Round — crumb">
+          <img class="product-main-img" id="main-show-3" src="assets/sourdough2.jpg" alt="Sourdough Round — crust">
+        </div>
+
+        <div class="product-thumbs">
+          <label for="img1" class="thumb-label">
+            <img class="product-thumb" src="assets/sourdough.jpg" alt="Whole round">
+          </label>
+          <label for="img2" class="thumb-label">
+            <img class="product-thumb" src="assets/sourdough1.webp" alt="Crumb view">
+          </label>
+          <label for="img3" class="thumb-label">
+            <img class="product-thumb" src="assets/sourdough2.jpg" alt="Crust close">
+          </label>
+        </div>
+      </div>
+
+      <!-- Right: Info -->
+      <div class="product-info">
+
+        <h1>Sourdough Round</h1>
+
+        <div class="product-price-row">
+          <span class="product-price">$6.75</span>
+          <span class="product-weight">700 g</span>
+        </div>
+
+        <p class="product-desc">
+          Our Sourdough Round is crafted with a live starter culture we've been nurturing for over
+          a decade. A long, cold 24-hour proof develops a complex, tangy flavour and an open,
+          irregular crumb — finished with a blistered, crackling crust that sings when you tap it.
+        </p>
+
+        <hr class="info-divider">
+
+        <!-- Ingredients -->
+        <div class="ingredients-box">
+          <div class="dot-corner"></div>
+          <h2>ingredients</h2>
+          <p>Stone-ground wheat flour, water, sea salt, live sourdough starter (wheat flour, water).
+             <span class="bold">Contains: wheat. May contain traces of rye and spelt.</span></p>
+        </div>
+
+        <!-- Quick-info tiles -->
+        <div class="info-tiles">
+          <div class="info-tile">
+            <span class="tile-icon">🌾</span>
+            <span class="tile-label">grain</span>
+            <span class="tile-value">Stone-ground wheat</span>
+          </div>
+          <div class="info-tile">
+            <span class="tile-icon">🕐</span>
+            <span class="tile-label">proof</span>
+            <span class="tile-value">24 h cold proof</span>
+          </div>
+          <div class="info-tile">
+            <span class="tile-icon">🍞</span>
+            <span class="tile-label">baked</span>
+            <span class="tile-value">Daily, 5 am</span>
+          </div>
+        </div>
+
+        <!-- Quantity + Add to Cart -->
+        <div class="purchase-row">
+          <label for="qty" class="qty-label">qty</label>
+          <select id="qty" name="qty" class="qty-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <a href="checkout.html" class="btn-add-cart">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Full-width Nutrition Panel -->
+      <div class="nutrition-section">
+        <div class="nutrition-header">
+          <h2>Nutrition Facts</h2>
+          <span>per 2-slice serving (approx. 80 g)</span>
+        </div>
+        <div class="nutrition-grid">
+          <div class="nutr-cell">
+            <span class="nutr-name">calories</span>
+            <span class="nutr-val">190</span>
+            <span class="nutr-dv">kcal</span>
+          </div>
+          <div class="nutr-cell">
+            <span class="nutr-name">carbs</span>
+            <span class="nutr-val">38 g</span>
+            <span class="nutr-dv">14% DV</span>
+          </div>
+          <div class="nutr-cell">
+            <span class="nutr-name">protein</span>
+            <span class="nutr-val">8 g</span>
+            <span class="nutr-dv">16% DV</span>
+          </div>
+          <div class="nutr-cell">
+            <span class="nutr-name">total fat</span>
+            <span class="nutr-val">1 g</span>
+            <span class="nutr-dv">1% DV</span>
+          </div>
+          <div class="nutr-cell">
+            <span class="nutr-name">saturated fat</span>
+            <span class="nutr-val">0.2 g</span>
+            <span class="nutr-dv">1% DV</span>
+          </div>
+          <div class="nutr-cell">
+            <span class="nutr-name">sodium</span>
+            <span class="nutr-val">320 mg</span>
+            <span class="nutr-dv">14% DV</span>
+          </div>
+          <div class="nutr-cell">
+            <span class="nutr-name">dietary fibre</span>
+            <span class="nutr-val">2.5 g</span>
+            <span class="nutr-dv">9% DV</span>
+          </div>
+          <div class="nutr-cell">
+            <span class="nutr-name">sugars</span>
+            <span class="nutr-val">1 g</span>
+            <span class="nutr-dv">—</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Bread.Co Bakery</p>
+    <a href="index.html">Branding</a>
+  </footer>
+
+</body>
+</html>

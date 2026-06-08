@@ -114,7 +114,7 @@
 
 .news-section.full-bleed {
   z-index: 0;
-  background-color: #E4AE0E;
+  background-color: #9A8590;
 }
 
 .full-bleed {
@@ -735,9 +735,9 @@ footer {
   z-index: 0;
 
   position: absolute;
-  bottom: 15vh;
+  bottom: 18vh;
 
-  right:10vw;
+  right:5vw;
   width: 35vw;
   min-width: 40em;
   height: auto;
@@ -917,4 +917,462 @@ footer {
   background-color: var(--color-text);
   border-color: var(--color-text);
   color: var(--color-bg);
+}
+
+/* ----------------------------------------------------
+   PAGE SECTION
+---------------------------------------------------- */
+ 
+.product-detail-section.full-bleed {
+  background-color: #fff7e1;
+  min-height: 85vh;
+}
+ 
+.product-detail-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+ 
+/* ----------------------------------------------------
+   IMAGE COLUMN
+---------------------------------------------------- */
+ 
+.product-images {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  top: var(--space-lg);
+}
+ 
+.thumb-radio { display: none; }
+ 
+.product-main-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-text);
+  display: block;
+  transition: filter var(--transition);
+}
+ 
+/* Default: only first main image visible */
+#main-show-2,
+#main-show-3 { display: none; }
+ 
+/* Show/hide main images based on checked radio */
+#img1:checked ~ .product-main-img-wrap #main-show-1 { display: block; }
+#img1:checked ~ .product-main-img-wrap #main-show-2 { display: none;  }
+#img1:checked ~ .product-main-img-wrap #main-show-3 { display: none;  }
+ 
+#img2:checked ~ .product-main-img-wrap #main-show-1 { display: none;  }
+#img2:checked ~ .product-main-img-wrap #main-show-2 { display: block; }
+#img2:checked ~ .product-main-img-wrap #main-show-3 { display: none;  }
+ 
+#img3:checked ~ .product-main-img-wrap #main-show-1 { display: none;  }
+#img3:checked ~ .product-main-img-wrap #main-show-2 { display: none;  }
+#img3:checked ~ .product-main-img-wrap #main-show-3 { display: block; }
+ 
+/* Thumbnails */
+.product-thumbs {
+  display: flex;
+  gap: var(--space-xs);
+}
+ 
+.product-thumb {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color var(--transition), opacity var(--transition);
+  opacity: 0.65;
+  display: block;
+}
+ 
+.thumb-label:hover .product-thumb {
+  border-color: var(--color-accent);
+  opacity: 1;
+}
+ 
+/* Highlight active thumbnail based on checked radio */
+#img1:checked ~ .product-thumbs label:nth-child(1) .product-thumb,
+#img2:checked ~ .product-thumbs label:nth-child(2) .product-thumb,
+#img3:checked ~ .product-thumbs label:nth-child(3) .product-thumb {
+  border-color: var(--color-accent);
+  opacity: 1;
+}
+ 
+/* ----------------------------------------------------
+   INFO COLUMN
+---------------------------------------------------- */
+ 
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+ 
+.product-info h1 {
+  font-size: 2.8rem;
+  line-height: 1.05;
+  margin: 0;
+}
+ 
+.product-price-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+ 
+.product-price {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  color: var(--color-accent);
+  line-height: 1;
+}
+ 
+.product-weight {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-teal);
+  border: 1.5px solid var(--color-teal);
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+}
+ 
+.product-desc {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  opacity: 0.85;
+  margin: 0;
+}
+ 
+.info-divider {
+  border: none;
+  border-top: 1.5px solid var(--color-text);
+  opacity: 0.15;
+  margin: 0;
+}
+ 
+ 
+/* ----------------------------------------------------
+   INGREDIENTS BOX
+---------------------------------------------------- */
+ 
+.ingredients-box {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='10'%3E%3Cpath d='M0 5 Q5 0 10 5 Q15 10 20 5' fill='none' stroke='%23b49a78' stroke-width='0.8' opacity='0.4'/%3E%3C/svg%3E");
+  background-size: 20px 10px;
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-text);
+  border-radius: var(--radius-lg);
+  padding: var(--space-sm) var(--space-md);
+  position: relative;
+  overflow: hidden;
+}
+ 
+.ingredients-box h2 {
+  font-family: var(--font-medium);
+  font-size: 0.85rem;
+  text-transform: lowercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  margin: 0 0 0.5rem 0;
+}
+ 
+.ingredients-box p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.8;
+}
+ 
+.dot-corner {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  border: 2px solid var(--color-text);
+  background: var(--color-bg);
+}
+ 
+ 
+/* ----------------------------------------------------
+   INFO TILES
+---------------------------------------------------- */
+ 
+.info-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xs);
+}
+ 
+.info-tile {
+  background: var(--color-white);
+  border: 2px solid var(--color-text);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm);
+  text-align: center;
+}
+ 
+.info-tile .tile-icon {
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+ 
+.info-tile .tile-label {
+  font-family: var(--font-medium);
+  font-size: 0.75rem;
+  text-transform: lowercase;
+  color: var(--color-teal);
+  display: block;
+  letter-spacing: 0.05em;
+}
+ 
+.info-tile .tile-value {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  display: block;
+  margin-top: 0.15rem;
+}
+ 
+ 
+/* ----------------------------------------------------
+   QUANTITY & ADD TO CART
+---------------------------------------------------- */
+ 
+.purchase-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+ 
+.qty-label {
+  font-family: var(--font-medium);
+  font-size: 0.85rem;
+  color: var(--color-teal);
+  text-transform: lowercase;
+  letter-spacing: 0.05em;
+}
+ 
+.qty-select {
+  height: 2.5rem;
+  padding: 0 0.75rem;
+  border: 2px solid var(--color-text);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  font-family: var(--font-medium);
+  font-size: 1rem;
+  color: var(--color-text);
+  cursor: pointer;
+  appearance: auto;
+}
+ 
+.qty-select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+ 
+.btn-add-cart {
+  flex: 1;
+  min-width: 160px;
+  padding: 0.7rem 1.5rem;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  font-family: var(--font-medium);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition), color var(--transition);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+ 
+.btn-add-cart:hover {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+  color: var(--color-bg);
+}
+ 
+ 
+/* ----------------------------------------------------
+   NUTRITION PANEL
+---------------------------------------------------- */
+ 
+.nutrition-section {
+  grid-column: 1 / -1;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-text);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-top: var(--space-lg);
+}
+ 
+.nutrition-header {
+  background-color: var(--color-teal);
+  padding: var(--space-sm) var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+ 
+.nutrition-header h2 {
+  font-family: var(--font-heading);
+  color: var(--color-white);
+  font-size: 1.1rem;
+  margin: 0;
+}
+ 
+.nutrition-header span {
+  font-family: var(--font-body);
+  color: var(--color-white);
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-left: auto;
+}
+ 
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+ 
+.nutr-cell {
+  padding: var(--space-sm) var(--space-md);
+  border-right: 1.5px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.08);
+}
+ 
+.nutr-cell:nth-child(4n) { border-right: none; }
+ 
+.nutr-name {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--color-teal);
+  text-transform: lowercase;
+  letter-spacing: 0.04em;
+  display: block;
+}
+ 
+.nutr-val {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--color-text);
+  display: block;
+  line-height: 1.1;
+}
+ 
+.nutr-dv {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  display: block;
+}
+
+@media (max-width: 56rem) {
+ 
+  .product-detail-inner {
+    grid-template-columns: 1fr;
+    padding: var(--space-lg) var(--space-sm);
+    gap: var(--space-lg);
+  }
+
+  .product-images {
+    position: static;
+  }
+
+  .product-thumbs {
+    flex-wrap: wrap;
+  }
+
+  .product-info h1 {
+    font-size: 2.4rem;
+  }
+
+  .product-price-row {
+    gap: var(--space-sm);
+  }
+
+  .info-tiles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .purchase-row {
+    flex-wrap: wrap;
+  }
+ 
+  .btn-add-cart {
+    width: 100%;
+    flex: none;
+  }
+ 
+  /* Nutrition: 2-column grid */
+  .nutrition-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+  /* Fix border reset for new 2-col layout */
+  .nutr-cell:nth-child(4n)  { border-right: 1.5px solid rgba(0, 0, 0, 0.08); }
+  .nutr-cell:nth-child(2n)  { border-right: none; }
+  .nutrition-header span { display: none; }
+}
+ 
+@media (max-width: 36rem) {
+
+  .product-detail-inner {
+    padding: var(--space-md) var(--space-xs);
+    gap: var(--space-md);
+  }
+
+  .product-info h1 {
+    font-size: 1.9rem;
+  }
+ 
+  .product-price {
+    font-size: 1.8rem;
+  }
+
+  .product-thumb {
+    width: 60px;
+    height: 46px;
+  }
+ 
+  .info-tiles {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.35rem;
+  }
+ 
+  .info-tile {
+    padding: var(--space-xs);
+  }
+ 
+  .info-tile .tile-icon {
+    font-size: 1.1rem;
+  }
+ 
+  .info-tile .tile-value {
+    font-size: 0.8rem;
+  }
+ 
+  .nutrition-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+ 
+  .nutr-val {
+    font-size: 1.1rem;
+  }
 }
