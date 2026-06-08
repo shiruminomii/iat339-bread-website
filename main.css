@@ -165,7 +165,7 @@ body {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 40rem) {
   body {
     padding: var(--space-lg);
     max-width: var(--max-width);
@@ -557,7 +557,7 @@ th {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 40rem) {
   .featured {
     grid-template-columns: repeat(3, 1fr);
   }
