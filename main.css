@@ -159,12 +159,9 @@ body {
   line-height: 1.6;
 }
 
-@media (max-width: 20rem) {
+@media (min-width: 20rem) {
   body {
     padding: var(--space-md);
-  }
-  .main-nav-right {
-    gap: 0.5rem;
   }
 }
 
