@@ -157,11 +157,13 @@ body {
   color: var(--color-text);
   padding: var(--space-sm);
   line-height: 1.6;
+  padding-bottom: 0;
 }
 
 @media (min-width: 20rem) {
   body {
     padding: var(--space-md);
+    padding-bottom: 0;
   }
 }
 
@@ -170,6 +172,7 @@ body {
     padding: var(--space-lg);
     max-width: var(--max-width);
     margin-inline: auto;
+    padding-bottom: 0;
   }
 }
 
@@ -361,6 +364,10 @@ form > button + button {
   margin-left: var(--space-xs);
 }
 
+form {
+  margin-bottom: 2rem;
+}
+
 /* ----------------------------------------------------
    INPUT FIELDS
 ---------------------------------------------------- */
@@ -494,6 +501,7 @@ table {
   min-width: 280px;
   border-collapse: collapse;
   background-color: var(--color-white);
+  margin-top: 2rem;
 }
 
 th,
@@ -630,14 +638,72 @@ li {
    FOOTER
 ---------------------------------------------------- */
 
-footer {
-  margin-top: var(--space-xl);
+.site-footer {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='10'%3E%3Cpath d='M0 5 Q5 0 10 5 Q15 10 20 5' fill='none' stroke='%23b49a78' stroke-width='0.8' opacity='0.4'/%3E%3C/svg%3E");
+  background-size: 20px 10px;
+  background-repeat: repeat;
+  background-color: var(--color-bg);
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
   text-align: center;
-  background-color: var(--color-accent-);
+  padding: 0 var(--space-md);
+}
+
+.footer-logo img {
+  width: 3rem;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.footer-contact p {
+  font-size: 0.9rem;
+  margin: 0;
   color: var(--color-text);
-  font-size: 0.875rem;
+}
+
+.footer-contact a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-family: var(--font-medium);
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  width: 100%;
   padding-top: var(--space-sm);
-  border-top: 1px solid var(--color-text);
+}
+
+.footer-bottom p {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
 }
 
 /* ----------------------------------------------------
